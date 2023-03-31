@@ -22,8 +22,17 @@
         
         window.alert('minha primeira mensagem em js');
         window.confirm('está gostando de javascript?');
-        window.prompt('qual é seu nome?');
-        // ainda nao é possivel guardar essas infos ou entender qual o usuario apertou, para isso, vamos fazer o uso de variaveis em frente de 'window' //
+        var nome = window.prompt('qual é seu nome?'); 
+        window.alert('é um grande prazer em te conhecer, ' + nome)
+        
+        /* a variavel nome recebe o resultado do PROMPT q aparecera na janela */
+
+        /* a var é como o estacionamento, usa pra guardar dados, a gente nomeia esses dados como "nome" ali em cima 
+        
+        tudo que se digitar nesse prompt vai ser jogado dentro de nome
+        */
+
+        /* ainda nao é possivel guardar essas infos ou entender qual o usuario apertou, para isso, vamos fazer o uso de variaveis em frente de 'window' */
     </script>
 </body>
 </html>
