@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            background: green;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20pt;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" > 
+        <!-- onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()" -->
+    Interaja...
+    </div>
+
+    <script>
+    
+        var a = window.document.getElementById('area')
+
+        // aqui a gente cria um var antes pra nao confundir quando temos muitos elementos, se fosse so 1, eu poderia ter colocado area.innerText por exemplo. colocamos FORA pra servir pra outras funcoes tambem.
+
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+
+        function clicar() {
+            a.innerText = 'Clicou!'
+            a.style.background = 'pink'
+          //aqui configura o que vai acontecer dps de eu escrever o metodo onclick e dar o nome  
+        }
+
+        function entrar() {
+            a.innerText = 'Entrou!'
+        }
+
+        function sair() {
+            a.innerText = 'Saiu!'
+            a.style.background = 'green'
+        }
+    </script>
+</body>
+</html>
+
+<!-- 
+    eventos DOM é tudo que possa acontecer com a div ou elemento 
+
+ex.: eventos de mouse 
+- mouseenter(): ele entrou na div
+- mousemove(): quando entrar, ele dispara
+- mousedown(): momento em que clico fundo
+- mouseup(): momento em que o mouse volta
+- click(): momento em que há um click rápido
+- mouseout(): quando se move o mouse pra fora da div
+
+    funcoes
+function action(parametros) {
+    (bloco)
+}
+-->
