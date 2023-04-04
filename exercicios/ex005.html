@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background: rgb(88, 139, 202);
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id="msg">Clique em mim</div>
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[0]
+
+
+        //CÓDIGO por seletor QUERY SELECTOR
+        var d = window.document.querySelector('div#msg')
+        d.style.background = 'blue'
+        // quando usamos id, é hashtag
+        // quando usamos class, é ponto
+
+
+        // d.style.background = 'green'
+        // d.innerText = 'Estou aguardando..' d é da var d
+        // window.document.write(msg.innerHTML) o write só funciona se estiver escrito depois da att do conteúdo por javascript
+        // d.innerText = 'Estou aguardando...'
+        // window.document.getElementById('msg').innerText = 'Olá'
+
+        // CÓDIGO por seletor MARCA
+        // var p1 = window.document.getElementsByTagName('p')[1]
+        // document.write(p1.innerHTML) innerText pega a tag sem os filhos, se tiver um strong, nao vai aparecer
+        // p1.style.color = 'blue'
+        // corpo.style.background = 'black'
+        // window.document.write('Está escrito assim: ' + p1.innerText)
+    </script>
+</body>
+</html>
+
+<!-- DOM é o Document Object Model
+
+    PODE-SE NAVEGAR NESSES ELEMENTOS ATRAVES DO JAVASCRIPT ATÉ. POSSO SELECIONA-LOS.
+
+    CONCEITO:
+
+    - conjunto de objetos dentro do navegador que vai dar acesso aos componentes internos do website, ele funciona quando se roda JS dentro do navegador
+
+    - é necessário saber fazer a árvore DOM do site
+    ela comeca da raiz do navegador, essa raiz se chama window. tudo dentro do javascript esta dentro de um objeto chamado window, janela, um objeto DOM
+
+    - dentro do window, temos objeto location (loc do site, url,pagina atual, pag anterior), objeto document (doc atual) e o history (de onde veio, pra onde vai)
+    - entro do document, tambem temos o objeto HTML, dentro de HTML, temos objeto head e body, que sao child de html
+    - dentro de head, temos meta, title, style
+    - dentro de body, temos h1, p, div
+    - dentro de p, temos strong
+
+    MÉTODOS DE ACESSO DOS ELEMENTOS DO DOM:
+
+    - por Marca
+    getElementsByTagName() consigo selecionar mais de um objeto (objetos de mesmo tipo etc)
+
+    - por ID
+    getElementById()
+
+    - por Nome
+    getElementsByName()
+
+    - por Classe
+    getElementsByClassName()
+
+    - por Seletor
+
+-->
