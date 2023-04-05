@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+
+    Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> Km/h
+    <input type="button" value="Verificar" onclick="calcular()"> 
+    
+    <div id="res">
+
+    </div>
+
+<!-- botao input de verificar, quando for clicado (onclick) vai receber a funcao (calcular) que sera definida dentro do script, pra fazer isso, precisamos selecionar a variavel a ser usada por query selector or getelementbyid e ai sim atribuir o que sera feito -->
+
+    <script>
+         
+        function calcular() {
+        //  var txtv = window.document.getElementById('txtvel') OU
+
+            var txtv = window.document.querySelector('input#txtvel') 
+
+        // aqui eu liguei o input ID da velocidade a ser digitada com a variavel, pro script localizar essa variavel ne, nao da pra deixar solto no ar pro js achar
+
+            var res = window.document.querySelector('div#res')
+
+            var vel = Number(txtv.value)
+            res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}Km/h</strong></p>` 
+        
+        // aqui é pra atualizar o res/resultado que for escrito na div la em cima atraves do javascript :)
+
+            if (vel > 60) {
+                res.innerHTML += `<p>Voce está <strong>multado</strong> por excesso de velocidade!</p>`
+            }
+
+            res.innerHTML += `<p>Dirija sempre com cinto de seguranca!</p>`
+
+        }
+
+    </script>
+</body>
+</html>
