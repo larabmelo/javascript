@@ -22,19 +22,23 @@ section {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.249);
 }
 
-section form {
-    font: 1.5em;
-    font-weight: 500;
-    padding: 9px;
+div#res {
+    text-align: center;
+}
+
+#foto {
+    display: block;
+    margin: auto;
+    padding-top: 1rem;
 }
 
 input {
     font-size: 1em;
 }
 
-section div#res {
+/* section div#res {
     text-align: center;
-}
+} */
 
 footer {
     color: white;
