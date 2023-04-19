@@ -10,7 +10,7 @@ function carregar() {
     if (hora >= 0 && hora < 12) {
         //BOM DIA!
             img.src = 'foto-manha.png'
-            back.style.backgroundColor = '#659be1'
+            back.style.backgroundColor = '#79a8e6'
     } else if (hora >= 12 && hora < 18) {
         // BOA TARDE
             img.src = 'foto-tarde.png'
