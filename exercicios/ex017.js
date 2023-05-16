@@ -1,5 +1,6 @@
 
 let valores = [8, 1, 7, 4, 2, 9]
+valores.sort()
 
 /*
 console.log(valores)
@@ -19,8 +20,7 @@ console.log(valores[5])
 // esse codigo vai listar até chegar o final da length da variavel valores
 // esse codigo eh tradicional do percurso de exibicao de vetores
 
-//SIMPLIFICANDO MAIS AINDA ESSAS LINHAS COM FOR IN (Q SÓ FUNCIONA COM ARRAYS E OBJETCS)
-
+//SIMPLIFICANDO MAIS AINDA ESSAS LINHAS COM FOR IN (Q SÓ FUNCIONA COM ARRAYS E OBJETCS):
 for(let pos in valores) { // para cada var posicao em var valores
     console.log(`A posicao ${pos} tem o valor ${valores[pos]}`)
 }
