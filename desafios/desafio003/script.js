@@ -18,13 +18,13 @@ function contar() {
         }
         if (i < f) {
             // Contagem crescente
-            for(var c = i; c <= f; c += p) {
-            res.innerHTML += `${c} `
+            for(var r = i; r <= f; r += p) {
+            res.innerHTML += `${r} `
             } 
         } else {
             // Contagem regressiva
-            for(var c = i; c >= f; c-= p) {
-                res.innerHTML += `${c} `
+            for(var r = i; r >= f; r-= p) {
+                res.innerHTML += `${r} `
             }
         }
         
