@@ -125,7 +125,7 @@ textarea::-webkit-scrollbar {
 }
 
 .pending-tasks span {
-  color: #333;
+  color: #707070;
 }
 
 .pending-tasks .clear-button {
