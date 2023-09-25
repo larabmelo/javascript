@@ -2,7 +2,8 @@
 
 const inputField = document.querySelector('.input-field textarea'),todoLists = document.querySelector('.todoLists'),
 pendingNum = document.querySelector('.pending-num'),
-clearButton = document.querySelector('.clear-button');
+clearButton = document.querySelector('.clear-button'), addButton = document.querySelector('.add-button');
+
 
 // We will call this function while adding, deleting and checking-unchecking the tasks
 
@@ -21,6 +22,23 @@ function allTasks() {
   todoLists.style.marginTop = '0px';
   clearButton.style.pointerEvents = 'none';
 }
+
+// Add task when the "Add Task" button is clicked
+addButton.addEventListener('click', () => {
+  let inputVal = inputField.value.trim();
+
+  if (inputVal.length > 0) {
+    let liTag = `<li class="list pending" onclick='handleStatus(this)'>
+      <input type="checkbox">
+      <span class="task">${inputVal}</span>
+      <i class="uil uil-trash" onclick='deleteTask(this)'></i>
+    </li>`;
+
+    todoLists.insertAdjacentHTML('beforeend', liTag);
+    inputField.value = '';
+    allTasks();
+  }
+});
 
 // Add task while we put value in text area and press enter
 inputField.addEventListener('keyup', (e) => {

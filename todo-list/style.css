@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  color: #464646;
 }
 
 body {
@@ -24,7 +25,10 @@ body {
 
 .container .input-field {
   position: relative;
-  height: 64px;
+  display: flex;
+  gap: 10px;
+  align-items: center; 
+  height: 50px;
   width: 100%;
 }
 
@@ -35,8 +39,9 @@ body {
   font-size: 18px;
   font-weight: 400;
   border-radius: 8px;
-  padding: 18px 45px 18px 15px;
+  padding: 10px 35px 10px 10px;
   border: 1px solid #ccc;
+  
 }
 
 .input-field textarea:focus {
@@ -50,11 +55,28 @@ textarea::-webkit-scrollbar {
 .input-field .note-icon {
   position: absolute;
   top: 50%;
-  right: 15px;
+  right: 75px;
   transform: translateY(-50%);
   pointer-events: none;
   font-size: 24px;
   color: #707070;
+}
+
+.input-field .add-button {
+    padding: 6px 12px;
+    outline: none;
+    border: none;
+    background: #c16fe8;
+    color: #fff;
+    height: 50px;
+    font-size: 15px;
+    border-radius: 8px;
+    white-space: nowrap;
+}
+
+.add-button:hover {
+  background: #b758e3;
+  cursor: pointer;
 }
 
 .input-field textarea:focus ~ .note-icon {
@@ -132,17 +154,16 @@ textarea::-webkit-scrollbar {
   padding: 6px 12px;
   outline: none;
   border: none;
-  background: #c16fe8;
-  color: #fff;
+  background: #fff;
+  color: #cb81ed;
   font-size: 14px;
-  border-radius: 4px;
   cursor: pointer;
   pointer-events: none;
   white-space: nowrap;
 }
 
 .clear-button:hover {
-  background-color: #cb81ed;
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 350px) {
