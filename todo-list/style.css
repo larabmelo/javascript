@@ -32,6 +32,11 @@ body {
   width: 100%;
 }
 
+input::placeholder {
+  text-align: center;
+  line-height: 50px;
+}
+
 .input-field textarea {
   height: 100%;
   width: 100%;
@@ -166,9 +171,27 @@ textarea::-webkit-scrollbar {
   text-decoration: underline;
 }
 
+@media screen and (max-width: 500px) {
+  .container {
+    padding: 25px;
+    margin: 85px 20px 0;
+    width: calc(100% - 40px);
+   
+  }
+
+  .input-field textarea {
+    font-size: 16px;
+  }
+
+  .pending-tasks span {
+    font-size: 14px;
+  }
+}
+
 @media screen and (max-width: 350px) {
   .container {
     padding: 25px 10px;
+    
   }
 
   .input-field textarea {
