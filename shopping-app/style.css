@@ -59,7 +59,7 @@
   .logo {
     font-size: 1.2rem;
     color: var(--text-color);
-    font-weight: 400;
+    font-weight: 500;
   }
 
   #cart-icon {
@@ -71,12 +71,17 @@
   .cart {
     position: fixed;
     top: 0;
-    right: 0;
+    right: -100%; /* to hide the cart when is not active */
     width: 360px;
     min-height: 100vh;
     padding: 20px;
     background: var(--bg-color);
     box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
+    transition: 0.3s;
+  }
+
+  .cart.active {
+    right: 0;
   }
 
   .cart-title {
@@ -233,3 +238,47 @@
   .add-cart:hover {
     background: hsl(251, 28%, 22%);
   }
+
+  /* Breakpoints / Making Responsive */
+
+  @media (max-width: 1080px) {
+    .nav {
+      padding: 15px;
+    }
+
+    section {
+      padding: 3rem 0 2rem;
+    }
+
+    .container {
+      margin: 0 auto;
+      width: 90%;
+    }
+
+    .shop {
+      margin-top: 2rem !important;;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .nav {
+      padding: 11px;
+    }
+    .logo {
+      font-size: 1rem;
+    }
+    .cart {
+      width: 320px;
+    }
+  }
+
+  @media (max-width: 360px) {
+    .shop {
+      margin-top: 1rem !important;
+    }
+    .cart {
+      width: 280px;
+    }
+  }
+
+  /* Melhorias: Adding Notification on Cart symbol*/
