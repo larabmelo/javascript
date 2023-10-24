@@ -9,7 +9,7 @@
 }
 
 body {
-  background-color: #e2c2f0;
+  background-color: #FCBE85;
 }
 
 .container {
@@ -50,7 +50,7 @@ input::placeholder {
 }
 
 .input-field textarea:focus {
-  border-color: #cb81ed;
+  border-color: #FCBE85;
 }
 
 textarea::-webkit-scrollbar {
@@ -71,7 +71,7 @@ textarea::-webkit-scrollbar {
     padding: 6px 12px;
     outline: none;
     border: none;
-    background: #c16fe8;
+    background: #fca452;
     color: #fff;
     height: 50px;
     font-size: 15px;
@@ -80,12 +80,12 @@ textarea::-webkit-scrollbar {
 }
 
 .add-button:hover {
-  background: #b758e3;
+  background: #fb8c24;
   cursor: pointer;
 }
 
 .input-field textarea:focus ~ .note-icon {
-  color: #cb81ed;
+  color: #fa9f49;
 }
 
 .container .todoLists {
@@ -99,7 +99,7 @@ textarea::-webkit-scrollbar {
   display: flex;
   align-items: center;
   list-style: none;
-  background-color: #f7ebfc;
+  background-color: #ffebd8;
   padding: 20px 15px;
   border-radius: 8px;
   margin-top: 10px;
@@ -110,7 +110,7 @@ textarea::-webkit-scrollbar {
 .todoLists .list input {
   height: 16px;
   min-width: 16px;
-  accent-color: #cb81ed;
+  accent-color: #FCBE85;
   pointer-events: none;
 }
 
@@ -160,7 +160,7 @@ textarea::-webkit-scrollbar {
   outline: none;
   border: none;
   background: #fff;
-  color: #cb81ed;
+  color: #f89a43;
   font-size: 14px;
   cursor: pointer;
   pointer-events: none;
